@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-header {
+    @apply py-2 px-7 text-sm/4 bg-white  w-full  rounded-[8px]  hover:text-red dark:bg-dark-bg;
+  }
+  .btn-header-active {
+    @apply bg-transparent hover:text-current dark:bg-dark-gray;
+  }
+  .lang-list {
+    @apply flex items-center gap-3 px-3 w-full py-2 text-sm  hover:bg-gray dark:hover:bg-dark-gray;
+  }
+  .btn-solid {
+    @apply text-button-gray-text text-base/4 font-medium bg-gray rounded-[8px] px-4 py-5 dark:bg-dark-gray dark:text-[#6D6D6D];
+  }
+  .btn-solid-active {
+    @apply bg-red text-white hover:bg-[#F54335];
+  }
+  .container {
+    @apply max-w-[1000px] mx-auto px-4 md:px-8;
+  }
+  .tooltip {
+    @apply invisible absolute rounded-lg opacity-85 text-sm/4 translate-y-full py-2 px-4 bg-black text-white -bottom-1 -left-4;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
+  }
+  .has-tooltip:hover svg {
+    @apply text-red;
+  }
+}
